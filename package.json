@@ -1,0 +1,39 @@
+{
+  "name": "@orioro/json-extend",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "scripts": {
+    "test": "jest --collectCoverage",
+    "serve": "browser-sync start --server demo --watch --ignore **/*/index.js --no-ui --no-ghost-mode",
+    "dev-serve": "npm run serve & rollup --config ./rollup/dev.config.js --watch",
+    "dev-test": "jest --watch",
+    "dev-bundle": "rollup --config ./rollup/dev.config.js",
+    "build": "rm -rf dist && rollup --config ./rollup/build.config.js",
+    "prepublish": "npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "browser-sync": "^2.24.7",
+    "jest": "^23.6.0",
+    "rollup": "^0.66.4",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-commonjs": "^9.1.8",
+    "rollup-plugin-node-resolve": "^3.4.0"
+  },
+  "dependencies": {
+    "lodash.isplainobject": "^4.0.6",
+    "lodash.merge": "^4.6.1",
+    "lodash.omit": "^4.5.0",
+    "object-path": "^0.11.4",
+    "toposort": "^2.0.2",
+    "traverse": "^0.6.6"
+  }
+}
