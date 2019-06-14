@@ -15,6 +15,9 @@
   },
   "author": "",
   "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
@@ -29,6 +32,7 @@
     "rollup-plugin-node-resolve": "^3.4.0"
   },
   "dependencies": {
+    "@orioro/util": "0.0.0",
     "lodash.isplainobject": "^4.0.6",
     "lodash.merge": "^4.6.1",
     "lodash.omit": "^4.5.0",
